@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
 
         <?php
-        // Mostrar resultado del acceso
+   
         if (!empty($mensaje)) {
             echo "<p class='mensaje'>$mensaje</p>";
         }
