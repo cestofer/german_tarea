@@ -1,30 +1,30 @@
 <?php
 session_start();
 
-// Variable para mensajes
+
 $mensaje = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Obtener los datos del formulario
+
     $nombre = trim($_POST["nombre"]);
     $usuario = trim($_POST["usuario"]);
     $password = $_POST["password"];
     $confirmar = $_POST["confirmar"];
 
-    // Validar campos vacíos
+  
     if (empty($nombre) || empty($usuario) || empty($password) || empty($confirmar)) {
 
         $mensaje = "Todos los campos son obligatorios.";
 
     }
-    // Validar longitud mínima
+  
     elseif (strlen($password) < 6) {
 
         $mensaje = "La contraseña debe tener mínimo 6 caracteres.";
 
     }
-    // Validar coincidencia de contraseñas
+  
     elseif ($password != $confirmar) {
 
         $mensaje = "Las contraseñas no coinciden.";
@@ -32,15 +32,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     else {
 
-        // Crear el hash de la contraseña
+   
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-        // Guardar datos del usuario en sesión
+        
         $_SESSION["usuario"] = $usuario;
         $_SESSION["nombre"] = $nombre;
         $_SESSION["password"] = $hash;
 
-        // Redirigir al login
+    
         header("Location: login.php");
         exit();
     }
