@@ -58,9 +58,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="contenedor">
 
-    <div class="imagen">
-        <img src="imagenes/registro.jpg" alt="Registro">
-    </div>
+ <div class="imagen">
+    <img src="registro.jpg" alt="Imagen de Registro">
+</div>
 
     <h1>Registro de Usuario</h1>
 
