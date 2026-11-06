@@ -49,11 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="contenedor">
 
-    <!-- Imagen para login -->
-    <div class="imagen">
-        <img src="imagenes/login.jpg" alt="Imagen Login">
-    </div>
-
+<div class="imagen">
+    <img src="login.jpg" alt="Imagen de Login">
+</div>
     <div class="formulario">
 
         <h1>Iniciar Sesión</h1>
